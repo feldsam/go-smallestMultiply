@@ -13,7 +13,7 @@ MainLoop:
 		fmt.Println("Trying: ", smallestMultiply)
 		for _,n := range nums {
 			if smallestMultiply % n != 0 {
-				smallestMultiply = smallestMultiply + max
+				smallestMultiply += max
 				continue MainLoop
 			}
 		}
