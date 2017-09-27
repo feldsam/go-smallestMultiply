@@ -6,14 +6,13 @@ func main()  {
 	//var nums []int = []int{1,2,3,4,5,6,7,8,9,10}
 	var nums []int = []int{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
 	var max int = getMax(nums...)
-	var smallestMultiply int = max
+	var smallestMultiply int
 
 MainLoop:
 	for {
-		fmt.Println("Trying: ", smallestMultiply)
+		smallestMultiply += max
 		for _,n := range nums {
 			if smallestMultiply % n != 0 {
-				smallestMultiply += max
 				continue MainLoop
 			}
 		}
